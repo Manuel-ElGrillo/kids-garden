@@ -1,1 +1,0 @@
-Hola Rodrigo, este espacio es para la sección del backend, tuve que crear este archivo para poder hacerte un commit y que puedas hacer pull del proyecto.
