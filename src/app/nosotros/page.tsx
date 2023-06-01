@@ -1,11 +1,9 @@
-import React from 'react'
 
-const nosotros = () => {
+
+export default function Nusotros() {
   return (
     <>
       <h1>Nosotros</h1>
     </>
   )
 }
-
-export default nosotros

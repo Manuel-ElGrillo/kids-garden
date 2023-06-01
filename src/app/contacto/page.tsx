@@ -1,11 +1,7 @@
-import React from 'react'
-
-const contacto = () => {
+export default function Contacto() {
   return (
     <>
-      <h1>Contacto & Staff</h1>
+      <h1>Contacto</h1>
     </>
   )
 }
-
-export default contacto
