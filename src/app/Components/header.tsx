@@ -16,32 +16,29 @@ const links = [{
 
 export function Header() {
     return (
-        <header className="flex justify-around items-center p-4">
-            <div>
-                <img src="" alt="manito" />
-            </div>
-            <div className="flex items-center flex-col">
-                <h1>CRECIENDO</h1>
-                <h2>Donde el aprendizaje es divertido</h2>
-            </div>
-            <div>
-                <img src="" alt="manito" />
-            </div>
-            <nav>
-                <ul>
-                    {links.map(({ label, route }) => (
-                        <li key={route}>
-                            <Link href={route}>
-                                {label}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            </nav>
-            <div>
-                <button>Ingresar</button>
-                <button>Registrarse</button>
-            </div>
+        <header className="flex h-60">
+            <section className="flex w-4/12 items-center">
+                <div className="flex justify-center">
+                    <img src="https://3.bp.blogspot.com/-9ZnsaiEesoE/VOTsxSoEfUI/AAAAAAAAAe0/T7tf0CwsRxg/s1600/jardin.jpg" alt="logo del jardin" className="w-2/3" />
+                </div>
+            </section>
+            <section className="flex justify-around w-8/12 p-10">
+                <nav>
+                    <ul className="flex space-x-4 text-lg border-b-2">
+                        {links.map(({ label, route }) => (
+                            <li key={route}>
+                                <Link href={route}>
+                                    {label}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+                <div className="space-x-4 text-lg">
+                    <button>Ingresar</button>
+                    <button>Registrarse</button>
+                </div>
+            </section>
         </header>
     );
 }
