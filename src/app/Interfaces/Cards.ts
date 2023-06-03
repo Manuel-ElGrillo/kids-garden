@@ -4,6 +4,5 @@ export interface Cards {
     link: string,
     imgSrc: string,
     alt: string,
-    bgColor: string,
-    id: number
+    bg: string
 }
