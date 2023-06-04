@@ -1,6 +1,6 @@
 export interface Cards {
     title: string,
-    text: string,
+    text: any,
     link: string,
     imgSrc: string,
     alt: string,
