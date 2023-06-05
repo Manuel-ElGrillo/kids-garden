@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import CardComponent from './Components/CardComponent'
+import ConsultForm from './Components/ConsultForm'
 
 export default function Home() {
   return (
@@ -39,6 +40,10 @@ export default function Home() {
           alt='Imagenes de niños de caricatura'
           bg='bg-[#C81FA0] max-w-sm p-6 rounded-lg shadow basis-1/4 mx-4' />
 
+      </section>
+
+      <section className='w-[90%] my-6'>
+        <ConsultForm />
       </section>
 
     </main>
