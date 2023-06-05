@@ -4,13 +4,15 @@ import { BsFacebook } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { BsWhatsapp } from "react-icons/bs";
+import Image from 'next/image';
+import logochico from "../imagenes/Logo_miniatura.png";
 
 export function Footer() {
     return (
-        <footer className="flex justify-around items-center w-screen h-60 bg-violet-900">
+        <footer className="flex justify-around items-center w-screen h-60 bg-[#C81FA0]">
             <section className='space-y-4'>
                 <div className='space-y-2'>
-                    <img src="" alt="logo del jardin" />
+                <Image src={logochico} alt="Logo creciendo" className="w-2/3" />
                     <p>Calle 501 - Gonnet - La Plata</p>
                     <p className='text-xl'>cre-siendo@educacion.org.ar</p>
                 </div>
