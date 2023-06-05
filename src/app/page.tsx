@@ -1,7 +1,5 @@
 "use client";
 import Image from 'next/image'
-import React, { useState } from 'react';
-  
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -12,11 +10,9 @@ export default function Home() {
   
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>
         <h1>
-          este es el home
+          ESTE ES EL HOME
         </h1>
-      </div>
     </main>
   )
 }
