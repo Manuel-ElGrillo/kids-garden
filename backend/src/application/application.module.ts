@@ -8,11 +8,11 @@ import { MailerModule } from '@nestjs-modules/mailer';
     imports: [
         MailerModule.forRoot({
             transport: {
-                host: 'smtp.ethereal.email',
+                host: 'smtp.gmail.com',
                 port: 587,
                 auth: {
-                    user: 'emmalee.hilpert@ethereal.email',
-                    pass: 'sU7sWw6MNt3zqgdE9E'
+                    user: process.env.EMAIL_USER,
+                    pass: process.env.EMAIL_PASS
                 }
             }
         }),
