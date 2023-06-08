@@ -3,7 +3,7 @@ import { Inject } from "@nestjs/common";
 import { v4 as uuidv4 } from 'uuid'
 
 import { MailService } from '../helpers';
-import { CreateInquiryRequest, InInquiryRepository, InInquiryService, InquiryModel } from "../../domain";
+import { CreateInquiryRequest, InInquiryRepository, InInquiryService, InquiryModel, InquiryResponse } from "../../domain";
 
 export class InquiryService implements InInquiryService {
 
@@ -12,7 +12,7 @@ export class InquiryService implements InInquiryService {
         private readonly repository: InInquiryRepository,
         private readonly mailService: MailService
     ) { }
-    createInquiry(inquiry: CreateInquiryRequest): Observable<boolean> {
+    createInquiry(inquiry: CreateInquiryRequest): Observable<InquiryResponse> {
 
         const newInquiry: InquiryModel = {
             inquiryId: uuidv4(),
@@ -29,7 +29,10 @@ export class InquiryService implements InInquiryService {
                 map((savedInquery) => {
                     this.mailService.inqueryMail(savedInquery)
                     // Create another function to notify the DATAENTRY
-                    return savedInquery ? true : false;
+                    return {
+                        success: true,
+                        data: savedInquery
+                    };
                 })
             )
     }
