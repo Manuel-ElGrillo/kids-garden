@@ -1,6 +1,12 @@
 "use client";
 import React,  { useState } from 'react'
-import Image from 'next/image'
+import styles from "../styles/Form.module.css"
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import axios from 'axios';
+import dotenv from 'dotenv'
+
+dotenv.config();
 
 const ConsultForm = () => {
 
@@ -9,97 +15,163 @@ const ConsultForm = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
+  const [level, setLevel] = useState('');
   const [nameError, setNameError] = useState(false);
   const [lastNameError, setLastnameError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [phoneError, setPhoneError] = useState(false);
   const [messageError, setMessageError] = useState(false);
+  const [levelError, setLevelError] = useState(false);
 
-  const handleSubmit = (values: any): void => {
+  const consultFormAlert = withReactContent(Swal);
 
-    if (name === '') {
+  const API_URL: string = "https://kids-garden.onrender.com/inquiry/create";
+  
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+
+    event.preventDefault();
+
+    const trimmedName = name.trim();
+    const trimmedLastName = lastName.trim();
+    const trimmedEmail = email.trim();
+    const trimmedPhone = phone.trim();
+    const trimmedMessage = message.trim();
+    
+    if (trimmedName === '') {
       setNameError(true);
     } else {
       setNameError(false);
     }
-  
-    if (lastName === '') {
+
+    if (trimmedLastName === '') {
       setLastnameError(true);
     } else {
       setLastnameError(false);
     }
-  
-    if (email === '') {
+
+    if (trimmedEmail === '') {
       setEmailError(true);
     } else {
       setEmailError(false);
     }
-  
-    if (phone === '') {
+
+    if (trimmedPhone === '') {
       setPhoneError(true);
     } else {
       setPhoneError(false);
     }
-  
-    if (message === '') {
+
+    if (trimmedMessage === '') {
       setMessageError(true);
     } else {
       setMessageError(false);
     }
 
-  }  
+    if (level === '') {
+      setLevelError(true);
+    } else {
+      setLevelError(false);
+    }
 
+    const formData = {
+      clientName: trimmedName,
+      clientSurname: trimmedLastName,
+      clientEmail: trimmedEmail,
+      clientPhone: trimmedPhone,
+      clientInquiry: trimmedMessage,
+      inquiryType: level,
+    };
+
+    try {
+      const res = await axios.post( API_URL, formData );
+
+      if (res.status === 201) {
+        setName('');
+        setLastname('');
+        setEmail('');
+        setPhone('');
+        setMessage('');
+        setLevel('');
+
+        consultFormAlert.fire({
+          text: 'Gracias por su consulta. En breve nos contactaremos con usted.',
+        });
+
+      } else {
+        consultFormAlert.fire({
+          text: 'Ha ocurrido un error al enviar el formulario.',
+        });
+      }
+      
+    } catch(error) {
+      consultFormAlert.fire({
+        text: 'Ha ocurrido un error inesperado. Lo sentimos.',
+      });
+      console.log(error);
+    }
+
+    // console.log(trimmedName, trimmedLastName, trimmedEmail, trimmedPhone, trimmedMessage);
+
+    
+
+  }
+
+  const disabledBtn = (): boolean => {
+    if (!name && !lastName && !email && !phone && !level && !message) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   return (
     <>
 
-      <div className='bg-gray-200 grid grid-cols-2 gap-4 p-10 rounded'>
+      <div className={styles['form-bg']}>
 
         <form action="" onSubmit={handleSubmit}>
 
-          <h3 className='text-black text-center'>Coordina una entrevista de admisión</h3>     
+          <h3 className='text-black text-left mb-6'>Coordina una entrevista de admisión</h3>    
 
+          <div className='grid grid-cols-2'>
             <div className='mb-6'>
-              <label 
-                htmlFor="name" 
+              <label
+                htmlFor="name"
                 className="block mb-2 text-sm font-medium text-gray-700">
-                  Nombre
+                Nombre
               </label>
-              <input 
-                type="text" 
-                id="name" 
-                className={`shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[90%] p-2.5 ${
-                  nameError ? 'border-red-500' : ''
-                }`} 
-                placeholder="Juan" 
-                required 
+              <input
+                type="text"
+                id="name"
+                className={`shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[90%] p-2.5 `}
+                placeholder="Juan"
+                required
                 value={name}
-                onChange={(event) => setName(event.target.value)}
+                onChange={(event) => { setName(event.target.value) }}
               />
-              {nameError && <p className="text-red-500">Este campo es requerido.</p>}
             </div>
 
             <div className='mb-6'>
-              <label 
-                htmlFor="lastname" 
+              <label
+                htmlFor="lastname"
                 className="block mb-2 text-sm font-medium text-gray-700">
-                  Apellido
+                Apellido
               </label>
-              <input 
-                type="text" 
-                id="lastname" 
-                className={`shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[90%] p-2.5 ${
-                  lastNameError ? 'border-red-500' : ''
-                }`} 
-                placeholder="Pérez" 
-                required 
+              <input
+                type="text"
+                id="lastname"
+                className={`shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[90%] p-2.5 `}
+                placeholder="Pérez"
+                required
                 value={lastName}
-                onChange={(event) => setLastname(event.target.value)}
+                onChange={(event) => { setLastname(event.target.value) }}
               />
-              {lastNameError && <p className="text-red-500">Este campo es requerido.</p>}
             </div>
 
-            <div className='mb-6'>
+          </div> 
+
+          <div className='grid grid-cols-2'>
+          <div className='mb-6'>
               <label 
                 htmlFor="email" 
                 className="block mb-2 text-sm font-medium text-gray-700">
@@ -112,9 +184,8 @@ const ConsultForm = () => {
                 placeholder="tucorreo@gmail.com" 
                 required 
                 value={email}
-                onChange={(event) => setEmail(event.target.value)}
+                onChange={(event) => {setEmail(event.target.value)}}
               />
-              {emailError && <p className="text-red-500">Este campo es requerido.</p>}
             </div>
 
             <div className='mb-6'>
@@ -124,24 +195,29 @@ const ConsultForm = () => {
                   Teléfono
               </label>
               <input 
-                type="tel" 
+                type="number" 
                 id="phone" 
                 className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[90%] p-2.5" 
-                placeholder="+123 456 789" 
+                placeholder="123 456 789" 
                 required 
                 value={phone}
-                onChange={(event) => setPhone(event.target.value)}
+                onChange={(event) => {setPhone(event.target.value)}}
               />
-                {phoneError && <p className="text-red-500">Este campo es requerido.</p>}
             </div>
-
+          </div>
+            
             <div className='mb-6'>
               <label 
                 htmlFor="level" 
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   Postulo a nivel:
               </label>
-              <select id="level" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
+              <select 
+                id="level" 
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " 
+                onChange={(event) => {setLevel(event.target.value)}}
+                value={level}>
+                <option>-- Elijir --</option>
                 <option>Guardería</option>
                 <option>Jardín de Infantes</option>
                 <option>Nivel Primario</option>
@@ -157,30 +233,24 @@ const ConsultForm = () => {
               <textarea 
                 id="message" 
                 rows={10} 
-                className={`block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ${
-                  messageError ? 'border-red-500' : ''
-                }`}
+                className={`block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
                 placeholder="Escriba aquí su mensaje" 
                 required
                 value={message}
-                onChange={(event) => setMessage(event.target.value)}>
+                onChange={(event) => {setMessage(event.target.value)}}>
               </textarea>
-              {messageError && <p className="text-red-500">Este campo es requerido.</p>}
             </div>
 
-            <div className='mb-6 flex justify-center'>
+            <div className='mb-6 flex justify-end'>
               <button 
                 type='submit' 
-                className='text-white bg-[#1999FA] font-medium rounded-lg text-sm px-5 py-2.5 text-center'>
+                className={disabledBtn() ? styles["form-btn-disabled"] : styles["form-btn-enabled"]}
+                disabled={disabledBtn()}>
                   Enviar
               </button>
             </div>
 
         </form>
-
-        <div>
-          <Image src={''} alt='' width={0} height={0}></Image>
-        </div>
 
       </div>
 
