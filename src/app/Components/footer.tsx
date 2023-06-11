@@ -1,9 +1,10 @@
 "use client";
-import { Tooltip, Button, Modal } from "flowbite-react";
+
 import { BsFacebook } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { BsWhatsapp } from "react-icons/bs";
+import Link from "next/link";
 import Image from 'next/image';
 import logochico from "../imagenes/Logo_miniatura.png";
 
@@ -28,20 +29,11 @@ export function Footer() {
                     <BsWhatsapp className='w-10 h-10' />
                 </div>
             </section>
-
-            <Tooltip content="Tooltip content" placement="bottom">
-                <Button>
-                    Default tooltip
-                </Button>
-            </Tooltip>
             
             <section className="flex flex-col items-center">
-                <h2>
-                    AYUDA
-                </h2>
-                <button>
-                    Preguntas frecuentes
-                </button>
+                <Link href="../contacto" className="text-lg font-semibold text-white-700 hover:underline dalg:text-white-500">
+                    Preguntas Frecuentes
+                </Link>
                 <button>
                     Legal y privacidad
                 </button>

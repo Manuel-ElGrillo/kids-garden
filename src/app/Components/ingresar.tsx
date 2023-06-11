@@ -11,6 +11,7 @@ export function Ingresar() {
   return (
     <div>
         <Button onClick={() => props.setOpenModal('form-elements')}>Ingresar</Button>
+        
         <Modal show={props.openModal === 'form-elements'} size="md" popup onClose={() => props.setOpenModal(undefined)}>
           <Modal.Header />
           <Modal.Body>

@@ -1,6 +1,7 @@
 "use client";
+
 import { Tooltip, Button, Modal, Checkbox, Label, TextInput } from "flowbite-react";
-import { Ingresar } from './ingresar'
+import { Ingresar } from "../Components/ingresar";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../imagenes/Logo_CreSiendo.png";
