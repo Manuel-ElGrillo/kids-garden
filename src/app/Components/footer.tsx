@@ -29,7 +29,7 @@ export function Footer() {
                 </div>
             </section>
 
-            <Tooltip content="Tooltip content">
+            <Tooltip content="Tooltip content" placement="bottom">
                 <Button>
                     Default tooltip
                 </Button>
