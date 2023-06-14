@@ -1,29 +1,36 @@
 .card-flip {
-    width: 300px; 
-    height: 350px; 
-    perspective: 1000px; 
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.5s ease;
-    margin: 0 1rem;
+  width: 220px; 
+  height: 275px; 
+  margin: 20px;
+  position: relative;
+  perspective: 800px; 
+  }
+  .content-flip{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
   }
   
-  .card-flip:hover {
+  .card-flip:hover .content-flip {
     transform: rotateY(180deg); 
   }
   
-  .card-flip > div {
+  .content-flip > div {
     position: absolute;
-    width: 350px;
+    width: 100%;
     height: 100%;
+    /* width: 250px; */
+    /* height: 100%; */
     backface-visibility: hidden; 
   }
   
-  .card-flip > div:first-child {
+  .content-flip > div:first-child {
     transform: rotateY(0deg); 
   }
   
-  .card-flip > div:last-child {
+  .content-flip > div:last-child {
     transform: rotateY(180deg); 
   }
   
