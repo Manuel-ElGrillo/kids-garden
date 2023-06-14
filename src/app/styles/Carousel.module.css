@@ -1,0 +1,37 @@
+.carousel-title {
+  color: #9e14df;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  top: -60px;
+}
+
+.carousel-img {
+  width: 350px;
+  height: auto;
+  position: relative;
+  left: 170px;
+  border-radius: 5%;
+}
+
+.carousel-text {
+  font-family: "Roboto";
+  font-style: italic;
+  font-size: 20px;
+  position: relative;
+  bottom: 50px;
+}
+
+.carousel-buttom {
+  width: 200px;
+  height: 35px;
+  font-family: "Tahoma";
+  font-size: 20px;
+  color: #f9fafb;
+  position: relative;
+  right: 1050px;
+  top: 90px;
+  background-color: #eebf17;
+  border-radius: 5px;
+}
