@@ -67,7 +67,7 @@ export default function Home() {
           <ConsultForm />
         </section>
 
-        <section className="flex items-center justify-center h-screen relative top-[-270px] font-[Adigiana_Toybox]">
+        <section className="flex items-center justify-center top-[-270px] font-[Adigiana_Toybox]">
           <div className="text-center">
             <h1 className="text-xl font-bold">NOS TRANSFORMAMOS DÍA A DÍA</h1>
             <p className="text-lg">Frente al continuo cambio de paradigmas, en tiempos en que todo parece acelerarse y sólo importa lo inmediato.
