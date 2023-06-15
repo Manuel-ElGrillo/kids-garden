@@ -25,3 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* @layer components {
+  .button-carousel {
+    @apply font-['Tahoma'] text-[20px] text-[#F9FAFB] relative right-[1050px] top-[90px] bg-[#EEBF17] w-[200px] h-[35px]  rounded-[5px];
+  }
+} */

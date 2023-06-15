@@ -32,12 +32,12 @@ export function Header() {
 
 
     return (
-        <header className="flex w-full h-60">
-            <section className="flex w-4/12 items-center">
-                <div className="flex justify-center">
-                    <Image src={logo} alt="Logo creciendo" className="w-4/5" />
-                </div>
-            </section>
+        <header className="flex h-60 mt-[-30px] bg-white">
+        <section className="flex w-4/12 items-center mb-[60px] ">
+            <div className="flex justify-center relative right-12">
+                <Image src={logo} alt="Logo creciendo" className="w-[65%]" />
+            </div>
+        </section>
             
             {/* navbar */}
             <section className="flex justify-around w-8/12 p-10">

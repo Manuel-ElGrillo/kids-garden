@@ -129,9 +129,9 @@ const ConsultForm = () => {
 
       <div className={styles['form-bg']}>
 
-        <form action="" onSubmit={handleSubmit}>
+        <form className={styles['form']} action="" onSubmit={handleSubmit}>
 
-          <h3 className='text-black text-left mb-6'>Coordina una entrevista de admisión</h3>    
+          <h3 className='text-black font-semibold text-left mb-6'>Coordina una entrevista de admisión</h3>    
 
           <div className='grid grid-cols-2'>
             <div className='mb-6'>
@@ -217,7 +217,7 @@ const ConsultForm = () => {
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" 
                 onChange={(event) => {setLevel(event.target.value)}}
                 value={level}>
-                <option>-- Elijir --</option>
+                <option>-- Eligir --</option>
                 <option>Guardería</option>
                 <option>Jardín de Infantes</option>
                 <option>Nivel Primario</option>

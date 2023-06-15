@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google'
 import Home from './page'
 import Nosotros from './nosotros/page'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin']})
 
 export const metadata = {
   title: 'Create Next App',
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Burbujitas - Kinder Garden</title>
+        <title>CreSiendo - Kinder Garden</title>
       </head>
       <body className={inter.className}>
         <Header />
