@@ -23,6 +23,8 @@ const ConsultForm = () => {
   const [messageError, setMessageError] = useState(false);
   const [levelError, setLevelError] = useState(false);
 
+  const maxCharacters = 255;
+
   const consultFormAlert = withReactContent(Swal);
 
   const API_URL: string = "https://kids-garden.onrender.com/inquiry/create";
@@ -63,10 +65,13 @@ const ConsultForm = () => {
 
     if (trimmedMessage === '') {
       setMessageError(true);
+    } else if ( trimmedMessage.length >= maxCharacters ) {
+      setMessageError(true)
+      setMessage(trimmedMessage.slice(0, maxCharacters));
     } else {
       setMessageError(false);
     }
-
+    
     if (level === '') {
       setLevelError(true);
     } else {
@@ -232,13 +237,15 @@ const ConsultForm = () => {
               </label>
               <textarea 
                 id="message" 
-                rows={10} 
-                className={`block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
+                // rows={8} 
+                className={`block p-2.5 w-full max-h-32 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
                 placeholder="Escriba aquí su mensaje" 
                 required
                 value={message}
-                onChange={(event) => {setMessage(event.target.value)}}>
+                onChange={(event) => {setMessage(event.target.value)}}
+                maxLength={maxCharacters}>
               </textarea>
+              <p className='text-gray-900'>{maxCharacters - message.length} caracteres restantes</p>
             </div>
 
             <div className='mb-6 flex justify-end'>
