@@ -219,7 +219,7 @@ const ConsultForm = () => {
               </label>
               <select 
                 id="level" 
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" 
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[95%] p-2.5" 
                 onChange={(event) => {setLevel(event.target.value)}}
                 value={level}>
                 <option>-- Eligir --</option>
@@ -238,7 +238,7 @@ const ConsultForm = () => {
               <textarea 
                 id="message" 
                 // rows={8} 
-                className={`block p-2.5 w-full max-h-32 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
+                className={`block p-2.5 w-[95%] max-h-32 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
                 placeholder="Escriba aquí su mensaje" 
                 required
                 value={message}
