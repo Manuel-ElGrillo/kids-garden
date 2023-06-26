@@ -6,17 +6,20 @@ import jardin from "../../../public/img/imgCarrousel/jardin.png"
 import manos from "../../../public/img/imgCarrousel/manos.png"
 import ninos from "../../../public/img/imgCarrousel/ninos.png"
 import sala from "../../../public/img/imgCarrousel/sala.png"
+import manitos from "../../../public/img/imgCarrousel/manitos.png"
 import styles from "../styles/Carousel.module.css"
+
+
 
 
 const CarouselComponent = () => {
     return (
         <Carousel
-            slideInterval={8000}
+            slideInterval={7000}
             className="bg-[#77EBB3] relative bottom-6"
         >
-            <div className="flex items-center justify-between mx-[70px]">
-                <div className="flex-col relative left-[50px]">
+            <div className="flex items-center justify-center mx-[70px]">
+                <div className="flex-col relative left-[-200px]">
                     <p className={styles['carousel-title']}>
                         {<>Despertar a un genio en un niño</>}
                     </p>
@@ -24,6 +27,13 @@ const CarouselComponent = () => {
                         {<>Respetamos el proceso particular de cada niño/a <br />
                             y su familia, reconociendo que todos somos únicos, <br /> pero NO los únicos.</>}
                     </p>
+                    <div>
+                        <Image
+                            className={styles['carousel-subimg']}
+                            alt="..."
+                            src={manitos}
+                        />
+                    </div>
                 </div>
                 <div>
                     <Image
@@ -32,34 +42,36 @@ const CarouselComponent = () => {
                         src={manos}
                     />
                 </div>
-                <button className={styles['carousel-buttom']}>
-                    Consultanos
-                </button>
             </div>
 
-            <div className="flex items-center justify-between mx-[70px]">
-                <div className="flex-col relative left-[50px]">
+            <div className="flex items-center justify-center mx-[70px]">
+                <div className="flex-col relative left-[-200px]">
                     <p className={styles['carousel-title']}>
                         {<>Despertar a un genio en un niño</>}
                     </p>
                     <p className={styles['carousel-text']}>
                         {<>Frente al contínuo cambio de paradigmas,<br /> en
-                            tiempos en que todo parece acelerarse y sólo importa <br />lo inmediato en “Cre-Siendo” proponemos “hacer”
-                            <br /> para volver a crecer...</>}
+                            tiempos en que todo parece acelerarse y sólo importa <br />lo inmediato en “Cre-Siendo” proponemos “hacer” para volver a crecer...</>}
                     </p>
+                    <div>
+                        <Image
+                            className={styles['carousel-subimg']}
+                            alt="..."
+                            src={manitos}
+                        />
+                    </div>
                 </div>
-                <Image
-                    className={styles['carousel-img']}
-                    alt="..."
-                    src={jardin}
-                />
-                <button className={styles['carousel-buttom']}>
-                    Consultanos
-                </button>
+                <div>
+                    <Image
+                        className={styles['carousel-img']}
+                        alt="..."
+                        src={jardin}
+                    />
+                </div>
             </div>
 
-            <div className="flex items-center justify-between mx-[70px]">
-                <div className="flex-col relative left-[50px]">
+            <div className="flex items-center justify-center mx-[70px]">
+                <div className="flex-col relative left-[-200px]">
                     <p className={styles['carousel-title']}>
                         {<>Despertar a un genio en un niño</>}
                     </p>
@@ -67,38 +79,49 @@ const CarouselComponent = () => {
                         {<>...acompañando a las familias al momento de <br />
                             decidir el camino de la educación para sus hijos.</>}
                     </p>
+                    <div>
+                        <Image
+                            className={styles['carousel-subimg']}
+                            alt="..."
+                            src={manitos}
+                        />
+                    </div>
                 </div>
-                <Image
-                    className={styles['carousel-img']}
-                    alt="..."
-                    src={ninos}
-                />
-                <button className={styles['carousel-buttom']}>
-                    Consultanos
-                </button>
+                <div>
+                    <Image
+                        className={styles['carousel-img']}
+                        alt="..."
+                        src={ninos}
+                    />
+                </div>
             </div>
 
-            <div className=" flex items-center justify-between mx-[70px]">
-                <div className="flex-col relative left-[50px]">
+            <div className=" flex items-center justify-center mx-[70px]">
+                <div className="flex-col relative left-[-200px]">
                     <p className={styles['carousel-title']}>
                         {<>Despertar a un genio en un niño</>}
                     </p>
                     <p className={styles['carousel-text']}>
                         {<>Con espacios adaptados exclusivamente para la <br />
-                            necesidad y edad de cada niño/a. En donde <br /> fomentamos la autonomia y sentido de libertad.</>}
+                            necesidad y edad de cada niño/a.<br /> En donde fomentamos la autonomia y sentido de libertad.</>}
                     </p>
+                    <div>
+                        <Image
+                            className={styles['carousel-subimg']}
+                            alt="..."
+                            src={manitos}
+                        />
+                    </div>
                 </div>
-                <Image
-                    className={styles['carousel-img']}
-                    alt="..."
-                    src={sala}
-                />
-                <button className={styles['carousel-buttom']}>
-                    Consultanos
-                </button>
+                <div>
+                    <Image
+                        className={styles['carousel-img']}
+                        alt="..."
+                        src={sala}
+                    />
+                </div>
             </div>
         </Carousel>
-
     )
 }
 
