@@ -27,7 +27,7 @@ const ConsultForm = () => {
 
   const consultFormAlert = withReactContent(Swal);
 
-  const API_URL: string = "https://kids-garden.onrender.com/inquiry/create";
+  const API_URL: string = "https://kids-garden-backend.onrender.com/inquiry/create";
   
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 
