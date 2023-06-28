@@ -1,0 +1,15 @@
+export const UsPageData = [
+    "Actuar  en forma cooperativa y creadora",
+    "Querer y respetar al otro",
+    "Resolver desafíos variados, tanto desde lo intelectual como desde la posibilidad de ser creativo e innovador.",
+    "Valorar la importancia del medio y contribuir a su preservación.",
+    "Pensar la realidad en sentido reflexivo y crítico.",
+    "Conocer y apreciar la cultura nacional.",
+    "Reconocer y gestionar los matices de sus emociones",
+    "Ejercer su libertad con creciente sentido ético y social.",
+    "Desarrollar  el juicio crítico y el sentido común.",
+    "Actuar respetando los valores de una sociedad democrática.",
+    "Ser espontáneos en la expresión de sus necesidades, y sensibles a las diferentes formas del ser propio y ajeno.",
+    "Crear a partir de la curiosidad.",
+    "Vivir pensando en contribuir a lograr  “LA PAZ”",
+]
