@@ -245,7 +245,7 @@ const ConsultForm = () => {
                 onChange={(event) => {setMessage(event.target.value)}}
                 maxLength={maxCharacters}>
               </textarea>
-              <p className='text-gray-900'>{maxCharacters - message.length} caracteres restantes</p>
+              <p className=' text-gray-600 text-xs relative left-[455px] py-1'>{maxCharacters - message.length} caracteres restantes</p>
             </div>
 
             <div className='mb-6 flex justify-end'>

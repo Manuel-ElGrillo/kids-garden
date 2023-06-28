@@ -18,11 +18,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ maxWidth: '100%', overflowX: 'hidden',  minHeight: '100vh' }}>
       <head>
         <title>CreSiendo - Kinder Garden</title>
       </head>
-      <body className={inter.className}>
+      <body className={inter.className} style={{backgroundColor:'#fff'}}>
         <Header />
         
         {children}
