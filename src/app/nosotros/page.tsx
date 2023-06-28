@@ -80,15 +80,15 @@ export default function Nosotros() {
 
       <section className="bg-[url('../../public/img/bgHome.png')] bg-no-repeat bg-white p-24">
 
-        <p className="font-sans font-normal font-style: italic text-justify px-10 py-3">La escuela con peldaños construidos a partir de desafíos por sortear, de situaciones problemáticas que ponen a los chicos en instancias de resolución y los involucra junto a otros, en la necesidad de poner en juego habilidades sobre las cuales se construyen, nuevas posibilidades y aprendizajes.
+        <p className="font-sans font-normal font-style: italic text-justify px-10 py-3">Cresiendo es una Institución Educativa que desde hace más de 15 años forma parte de la Comunidad Educativa Argentina.
         </p>
 
         <p className="font-sans font-normal font-style: italic text-justify px-10 py-3">
-          Buscamos construir un jardín  en el que  cada contenido se piense significativo para ese niño que necesita apropiarse de él para crecer.
+        Nuestro objetivo principal es poder brindar una educación integral que privilegie la construcción de herramientas que le permitan al alumno un aprendizaje significativo y placentero.
         </p>
 
         <p className="font-sans font-normal font-style: italic text-justify px-10 py-3">
-          Un jardín que entiende que son los niños los protagonistas de los procesos de enseñanza-aprendizaje y que los maestros somos los  constantes reformuladores de senderos y caminos.
+        Valoramos al niño como persona, ser social, con identidad, generador de cambios, intelectual, creativo, capaz y reflexivo. Trabajamos, por lo tanto, desde muy temprana edad para que desarrollando el potencial humano por medio de valores, actitudes, conocimientos, conductas socialmente aceptadas y habilidades, lograremos la formación de un sujeto capaz de tener iniciativa, responsabilidad, compromiso y riqueza en su vida interior.
         </p>
 
 
