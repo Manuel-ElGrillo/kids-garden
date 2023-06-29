@@ -77,7 +77,7 @@ export default function Programas() {
         />
       </section>
 
-      <section className="bg-gradient-to-b from-red-300 via-fuchsia-300 to-red-300 w-full h-[] relative left-[-30px]">
+      <section className="bg-gradient-to-b from-red-300 via-purple-300 to-red-300 w-full h-[] relative left-[-30px]">
         <h2 className="flex justify-around font-['Tahoma'] text-[#f74479] text-2xl  mt-6 mb-4">🪁 Sala Primeros Pasos 🧩</h2>
         <Sala
           title='Método Montesori'
@@ -108,7 +108,7 @@ export default function Programas() {
         />
       </section>
 
-      <section className="bg-gradient-to-tl from-violet-400 via-emerald-300 to-fuchsia-200 w-full h-[860px] relative left-[-30px]">
+      <section className="bg-gradient-to-tl from-yellow-200 via-teal-300 to-yellow-200 w-full h-[860px] relative left-[-30px]">
         <h2 className="flex justify-around font-['Tahoma'] text-[#ff7e4b] text-2xl  mt-6 mb-4">🔬 Sala Pequeños Gigantes 🎺</h2>
         <Sala
           title='Método Montesori'
