@@ -28,12 +28,12 @@ export default function Home() {
             imgSrc='/img/rings.png'
             alt='Imagen de juguete para niños'
             bg='bg-[#1999FA] p-6 rounded-lg shadow space-x-0.5'
-            backTitle='Estrellita'
+            backTitle='Estrellitas'
             backText='En esta etapa desarrollamos la habilidad de comunicarse y expresar sus primeras palabras' />
 
           <CardComponent
             title='Pequeñitos'
-            text={<>Actividades para <br /> niños a partir de 2 años</>}
+            text={<>Actividades para <br /> niños <br /> a partir de 2 años</>}
             imgSrc='/img/boat.png'
             alt='Imagen de un barco de juguete'
             bg='bg-[#9DC620] max-w-[300px] p-6 rounded-lg shadow space-x-0.5'
@@ -42,7 +42,7 @@ export default function Home() {
 
           <CardComponent
             title='Primeros Pasos'
-            text={<>Actividades para niños <br /> a partir de 3 años</>}
+            text={<>Actividades para <br /> niños <br /> a partir de 3 años</>}
             imgSrc='/img/blocks.png'
             alt='Imagen de cubos de juguete'
             bg='bg-[#FF7223] max-w-[300px] p-6 rounded-lg shadow space-x-0.5'
@@ -51,7 +51,7 @@ export default function Home() {
 
           <CardComponent
             title='Pequeños Gigantes'
-            text={<>Grupo para niños <br /> de 4 a 6 años</>}
+            text={<>Actividades para <br /> niños <br /> de 4 a 6 años</>}
             imgSrc='/img/children.png'
             alt='Imagenes de niños de caricatura'
             bg='bg-[#C81FA0] max-w-[300px] p-6 rounded-lg shadow space-x-0.5'
@@ -67,11 +67,11 @@ export default function Home() {
           <ConsultForm />
         </section>
 
-        <section className="flex items-center justify-center top-[-270px] font-[Adigiana_Toybox]">
+        <section className="flex items-center justify-center relative top-[90px] font-['Tahoma']">
           <div className="text-center">
-            <h1 className="text-xl font-bold">NOS TRANSFORMAMOS DÍA A DÍA</h1>
+            <h2 className="text-xl font-bold">NOS TRANSFORMAMOS DÍA A DÍA</h2>
             <p className="text-lg">Frente al continuo cambio de paradigmas, en tiempos en que todo parece acelerarse y sólo importa lo inmediato.
-             <br />En <b className="font-['Poppins']">CreSiendo</b> proponemos “hacer” para volver a crecer.</p>
+             <br />En <b className="font-['Tahoma']">CreSiendo</b> proponemos “hacer” para volver a crecer.</p>
           </div>
         </section>
 
