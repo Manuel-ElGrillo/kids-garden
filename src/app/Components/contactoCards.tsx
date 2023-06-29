@@ -25,7 +25,7 @@ const ContactoCards: React.FC<Contacto> = ({
   return (
     <div>
       <section>
-        <div className="py-6">
+        <div className="py-5">
           <Card
             onClick={() => props.setOpenModal("dismissible")}
             className={`max-w-lg text-center transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer ${background}`}
