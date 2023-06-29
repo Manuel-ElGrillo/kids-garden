@@ -1,7 +1,11 @@
 import './globals.css'
+import { Footer } from './Components/footer'
+import { Header } from './Components/header'
 import { Inter } from 'next/font/google'
+import Home from './page'
+import Nosotros from './nosotros/page'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin']})
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,8 +18,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" style={{ maxWidth: '100%', overflowX: 'hidden',  minHeight: '100vh' }}>
+      <head>
+        <title>CreSiendo - Kinder Garden</title>
+      </head>
+      <body className={inter.className} style={{backgroundColor:'#fff'}}>
+        <Header />
+        
+        {children}
+
+        <Footer />
+      </body>
     </html>
   )
 }

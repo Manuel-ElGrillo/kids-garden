@@ -1,0 +1,32 @@
+.carousel-title {
+  color: #9e14df;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  top: 40px;
+}
+
+.carousel-text {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 20px;
+  position: relative;
+  bottom: -50px;
+}
+
+.carousel-subimg {
+  width: 350px;
+  height: auto;
+  position: relative;
+  left: 50px;
+}
+
+.carousel-img {
+  width: 350px;
+  height: auto;
+  position: relative;
+  left: 60px;
+  border-radius: 5%;
+}
+

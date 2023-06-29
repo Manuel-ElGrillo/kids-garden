@@ -1,0 +1,65 @@
+.form-input {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 0.625rem;
+    border-width: 1px;
+    border-radius: 0.5rem;
+    width: 90%;
+    display: block;
+    opacity: 1;
+    background-color: rgb(249 250 251);
+    border-color: rgb(209 213 219);
+    color: rgb(17 24 39);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+}
+
+.form-error-border {
+    opacity: 1;
+    border-color: rgb(240 82 82);
+}
+
+.form-error-text {
+    opacity: 1;
+    color: rgb(240 82 82);
+}
+
+.form-bg {
+    background:url('/img/Formulario-admision.jpg');
+    background-repeat: no-repeat;
+    width: 700px;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    margin: 50px;
+    grid-row: inherit;
+    margin-inline: auto ;
+}
+
+.form {
+    margin: 20px;
+}
+
+.form-btn-enabled {
+    color: black;
+    background-color: #eebf17;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    border: 1px;
+    border-color: black;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 0.625rem 5rem 0.625rem 5rem;
+    text-align: center;
+}
+
+.form-btn-disabled {
+    color: white;
+    background-color: #f0d574;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    border: 1px;
+    border-color: black;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 0.625rem 5rem 0.625rem 5rem;
+    text-align: center;
+}
