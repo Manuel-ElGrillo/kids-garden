@@ -1,114 +1,147 @@
 'use client';
-import { Accordion } from 'flowbite-react';
+import { Accordion } from "flowbite-react";
+import Link from "next/link";
 
 export function Preguntas() {
-
-    return (
-        <Accordion>
-          <Accordion.Panel>
-            <Accordion.Title>
-              What is Flowbite?
-            </Accordion.Title>
-            <Accordion.Content>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                <p>
-                  Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons,
-                  dropdowns, modals, navbars, and more.
-                </p>
-              </p>
-              <p className="text-gray-500 dark:text-gray-400">
-                <p>
-                  Check out this guide to learn how to 
-                </p>
-                <a
-                  className="text-cyan-600 hover:underline dark:text-cyan-500"
-                  href="https://flowbite.com/docs/getting-started/introduction/"
-                >
-                  <p>
-                    get started
-                  </p>
-                </a>
-                <p>
-                  and start developing websites even faster with components on top of Tailwind CSS.
-                </p>
-              </p>
-            </Accordion.Content>
-          </Accordion.Panel>
-          <Accordion.Panel>
-            <Accordion.Title>
-              Is there a Figma file available?
-            </Accordion.Title>
-            <Accordion.Content>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                <p>
-                  Flowbite is first conceptualized and designed using the Figma software so everything you see in the library
-                  has a design equivalent in our Figma file.
-                </p>
-              </p>
-              <p className="text-gray-500 dark:text-gray-400">
-                <p>
-                  Check out the
-                </p>
-                <a
-                  className="text-cyan-600 hover:underline dark:text-cyan-500"
-                  href="https://flowbite.com/figma/"
-                >
-                  <p>
-                    Figma design system
-                  </p>
-                </a>
-                <p>
-                  based on the utility classes from Tailwind CSS and components from Flowbite.
-                </p>
-              </p>
-            </Accordion.Content>
-          </Accordion.Panel>
-          <Accordion.Panel>
-            <Accordion.Title>
-              What are the differences between Flowbite and Tailwind UI?
-            </Accordion.Title>
-            <Accordion.Content>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                <p>
-                  The main difference is that the core components from Flowbite are open source under the MIT license, whereas
-                  Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone
-                  components, whereas Tailwind UI offers sections of pages.
-                </p>
-              </p>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                <p>
-                  However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no
-                  technical reason stopping you from using the best of two worlds.
-                </p>
-              </p>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                Learn more about these technologies:
-              </p>
-              <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
-                <li>
-                  <a
-                    className="text-cyan-600 hover:underline dark:text-cyan-500"
-                    href="https://flowbite.com/pro/"
-                  >
-                    <p>
-                      Flowbite Pro
-                    </p>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="text-cyan-600 hover:underline dark:text-cyan-500"
-                    href="https://tailwindui.com/"
-                    rel="nofollow"
-                  >
-                    <p>
-                      Tailwind UI
-                    </p>
-                  </a>
-                </li>
-              </ul>
-            </Accordion.Content>
-          </Accordion.Panel>
-        </Accordion>
-      )
+  return (
+    <Accordion className="flex flex-wrap">
+      {/* pregunta 1 */}
+      <Accordion.Panel>
+        <Accordion.Title>¿Cómo puedo inscribir a mi hijo/a?</Accordion.Title>
+        <Accordion.Content>
+          <p className="mb-2 text-gray-500 dark:text-gray-400">
+            <p>
+              Solicitando una entrevista con las autoridades del Instituto, para
+              ello debe completar el
+              <Link
+                href="/"
+                className="font-semibold text-blue-700 hover:underline dalg:text-blue-500"
+              >
+                {" "}
+                formulario{" "}
+              </Link>{" "}
+              de consulta indicando:
+              <br />
+              <br />
+              - Nombre y apellido del padre, madre o tutor
+              <br />
+              - Nombre del Alumno/a
+              <br />
+              - Nombre de la sala a la cual desea incorporarse
+              <br />
+              - Teléfono
+              <br />
+              - email.
+              <br />
+              <br />
+              Una vez realizado el trámite una autoridad del jardín se
+              comunicara para acordar una visita al mismo.
+            </p>
+          </p>
+        </Accordion.Content>
+      </Accordion.Panel>
+      {/* pregunta 2 */}
+      <Accordion.Panel>
+        <Accordion.Title>
+          Una vez inscripto. ¿Cómo obtengo el numero de legajo?
+        </Accordion.Title>
+        <Accordion.Content>
+          <p className="mb-2 text-gray-500 dark:text-gray-400">
+            <p>
+              Una vez inscripto se le enviara por el mail el nro de legajo del
+              alumno, con ese nro y el DNI del titular debe ingresar al
+              siguiente
+              <br />
+              <Link
+                href="/"
+                className="font-semibold text-blue-700 hover:underline dalg:text-blue-500"
+              >
+                formulario
+              </Link>{" "}
+              para validar los datos de referencia.
+            </p>
+          </p>
+        </Accordion.Content>
+      </Accordion.Panel>
+      {/* pregunta 3 */}
+      <Accordion.Panel>
+        <Accordion.Title>
+          Si mi hijo/a ya pertenece al instituto. ¿Puedo gestionar el beneficio
+          de la media beca?
+        </Accordion.Title>
+        <Accordion.Content>
+          <p className="mb-2 text-gray-500 dark:text-gray-400">
+            <p>
+              Si. Si el alumno/a ya forma parte de la institución y cumplió más
+              de 1 ciclo escolar dentro del mismo, tiene derecho y siempre que
+              las circunstancias sean debidamente justificadas.
+              <br />
+              <br />
+              Consulta los requisitos{" "}
+              <Link
+                href="/"
+                className="font-semibold text-blue-700 hover:underline dalg:text-blue-500"
+              >
+                aquí.
+              </Link>
+            </p>
+          </p>
+        </Accordion.Content>
+      </Accordion.Panel>
+      {/* pregunta 4 */}
+      <Accordion.Panel>
+        <Accordion.Title>
+          Si mi hijo/a no es de nacionalidad argentina. ¿Puedo inscribir al
+          mismo dentro de la institución?
+        </Accordion.Title>
+        <Accordion.Content>
+          <p className="mb-2 text-gray-500 dark:text-gray-400">
+            Sí. Presentando la misma información requerida para las personas nativas del país:
+          </p>
+          <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
+            <li>
+              <a
+                className="text-cyan-600 hover:underline dark:text-cyan-500"
+                href="https://flowbite.com/pro/"
+              >
+                <p>Ver requisitos (Consulta 1)</p>
+              </a>
+            </li>
+            <li>
+              <a
+                className="text-cyan-600 hover:underline dark:text-cyan-500"
+                href="https://tailwindui.com/"
+                rel="nofollow"
+              >
+                <p>Ver requisitos (Consulta 2)</p>
+              </a>
+            </li>
+          </ul>
+        </Accordion.Content>
+      </Accordion.Panel>
+      {/* pregunta 5 */}
+      <Accordion.Panel>
+        <Accordion.Title>
+          ¿Cuál es el periodo máximo de estar pre-inscripto?
+        </Accordion.Title>
+        <Accordion.Content>
+          <p className="mb-2 text-gray-500 dark:text-gray-400">
+            <p>
+              Los pedidos de renovación deberán efectuarse dentro de los TREINTA (30) días anteriores al 
+              vencimiento de la matrícula.
+              <br />
+              <br />
+              Si te presentas dentro de los TREINTA (30) días posteriores al vencimiento de la residencia 
+              temporaria para solicitar tu renovación, sufrirás un recargo del CINCUENTA POR CIENTO (50%) 
+              del monto de la tasa prevista para el trámite.
+              <br />
+              <br />
+              Transcurridos los plazos establecidos, caducará la facultad de peticionar la renovación de la 
+              matrícula.
+            </p>
+          </p>
+        </Accordion.Content>
+      </Accordion.Panel>
+    </Accordion>
+  );
 }
