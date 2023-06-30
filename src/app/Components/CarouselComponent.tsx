@@ -11,13 +11,11 @@ import styles from "../styles/Carousel.module.css"
 
 
 
-
 const CarouselComponent = () => {
     return (
         <Carousel
             slideInterval={7000}
-            className="bg-[#77EBB3] relative bottom-6 scr"
-
+            className="no-drag"
         >
             <div className="flex items-center justify-center mx-[70px]">
                 <div className="flex-col relative left-[-200px]">
