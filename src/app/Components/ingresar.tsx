@@ -12,7 +12,7 @@ export function Ingresar() {
 
   return (
     <div>
-      <Button onClick={() => props.setOpenModal("form-elements")}>
+      <Button className="bg-ccolor01" onClick={() => props.setOpenModal("form-elements")}>
         Ingresar
       </Button>
 
