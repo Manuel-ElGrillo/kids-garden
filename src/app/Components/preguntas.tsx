@@ -4,12 +4,12 @@ import Link from "next/link";
 
 export function Preguntas() {
   return (
-    <Accordion className="flex flex-wrap">
+    <Accordion className="bg-gray-200 text-black flex flex-wrap">
       {/* pregunta 1 */}
       <Accordion.Panel>
-        <Accordion.Title>¿Cómo puedo inscribir a mi hijo/a?</Accordion.Title>
+        <Accordion.Title className="text-gray-800 dark:text-gray-700">¿Cómo puedo inscribir a mi hijo/a?</Accordion.Title>
         <Accordion.Content>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
+          <div className="mb-2 text-gray-800 dark:text-gray-700">
             <p>
               Solicitando una entrevista con las autoridades del Instituto, para
               ello debe completar el
@@ -37,16 +37,16 @@ export function Preguntas() {
               Una vez realizado el trámite una autoridad del jardín se
               comunicara para acordar una visita al mismo.
             </p>
-          </p>
+          </div>
         </Accordion.Content>
       </Accordion.Panel>
       {/* pregunta 2 */}
       <Accordion.Panel>
-        <Accordion.Title>
+        <Accordion.Title className="text-gray-800 dark:text-gray-700">
           Una vez inscripto. ¿Cómo obtengo el numero de legajo?
         </Accordion.Title>
         <Accordion.Content>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
+          <div className="mb-2 text-gray-800 dark:text-gray-700">
             <p>
               Una vez inscripto se le enviara por el mail el nro de legajo del
               alumno, con ese nro y el DNI del titular debe ingresar al
@@ -60,17 +60,17 @@ export function Preguntas() {
               </Link>{" "}
               para validar los datos de referencia.
             </p>
-          </p>
+          </div>
         </Accordion.Content>
       </Accordion.Panel>
       {/* pregunta 3 */}
       <Accordion.Panel>
-        <Accordion.Title>
+        <Accordion.Title className="text-gray-800 dark:text-gray-700">
           Si mi hijo/a ya pertenece al instituto. ¿Puedo gestionar el beneficio
           de la media beca?
         </Accordion.Title>
         <Accordion.Content>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
+          <div className="mb-2 text-gray-800 dark:text-gray-700">
             <p>
               Si. Si el alumno/a ya forma parte de la institución y cumplió más
               de 1 ciclo escolar dentro del mismo, tiene derecho y siempre que
@@ -85,20 +85,20 @@ export function Preguntas() {
                 aquí.
               </Link>
             </p>
-          </p>
+          </div>
         </Accordion.Content>
       </Accordion.Panel>
       {/* pregunta 4 */}
       <Accordion.Panel>
-        <Accordion.Title>
+        <Accordion.Title className="text-gray-800 dark:text-gray-700">
           Si mi hijo/a no es de nacionalidad argentina. ¿Puedo inscribir al
           mismo dentro de la institución?
         </Accordion.Title>
         <Accordion.Content>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
+          <p className="mb-2 text-gray-800 dark:text-gray-700">
             Sí. Presentando la misma información requerida para las personas nativas del país:
           </p>
-          <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
+          <ul className="list-disc pl-5 text-gray-800 dark:text-gray-700">
             <li>
               <a
                 className="text-cyan-600 hover:underline dark:text-cyan-500"
@@ -121,11 +121,11 @@ export function Preguntas() {
       </Accordion.Panel>
       {/* pregunta 5 */}
       <Accordion.Panel>
-        <Accordion.Title>
+        <Accordion.Title className="text-gray-800 dark:text-gray-700">
           ¿Cuál es el periodo máximo de estar pre-inscripto?
         </Accordion.Title>
         <Accordion.Content>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
+          <div className="mb-2 text-gray-800 dark:text-gray-700">
             <p>
               Los pedidos de renovación deberán efectuarse dentro de los TREINTA (30) días anteriores al 
               vencimiento de la matrícula.
@@ -139,7 +139,7 @@ export function Preguntas() {
               Transcurridos los plazos establecidos, caducará la facultad de peticionar la renovación de la 
               matrícula.
             </p>
-          </p>
+          </div>
         </Accordion.Content>
       </Accordion.Panel>
     </Accordion>

@@ -6,7 +6,7 @@ import Main from './Components/Main'
 export default function Home() {
 
   return (
-    <div className="bg-white h-[1950px]">
+    <div className="bg-white text-black h-[1950px]">
       <Main />
 
       <main className="flex min-h-screen flex-col items-center justify-between p-24 relative top-[20px] bg-[url('../../public/img/bgHome.png')] bg-no-repeat ">

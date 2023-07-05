@@ -42,7 +42,7 @@ export function Header() {
             {/* navbar */}
             <section className="flex justify-around w-8/12 p-10">
                 <nav>
-                    <ul className="flex space-x-4 text-lg border-b-2">
+                    <ul className="flex space-x-4 text-xl border-b-2 border-ccolor04 text-ccolor04 font-bold">
                         {links.map(({ label, route }) => (
                             <li key={route}>
                                 <Link href={route}>
@@ -55,7 +55,6 @@ export function Header() {
 
                 {/* Login y registro */}
                 <div className="flex place-self-start space-x-8 text-lg">
-                    <Button>Registrarse</Button>
 
                     <div>
                         <Tooltip className="flex items-center h-20 w-52 text-center" content="Esta seccion es solo para alumnos registrados" placement="bottom" arrow={false}>
