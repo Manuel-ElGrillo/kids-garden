@@ -153,6 +153,8 @@ const ConsultForm = () => {
                 required
                 value={name}
                 onChange={(event) => { setName(event.target.value) }}
+                pattern="^[a-zA-Z\s]+$"
+                title="Solo están permitidas letras en este campo"
               />
             </div>
 
@@ -170,6 +172,8 @@ const ConsultForm = () => {
                 required
                 value={lastName}
                 onChange={(event) => { setLastname(event.target.value) }}
+                pattern="^[a-zA-Z\s]+$"
+                title="Solo están permitidas letras en este campo"
               />
             </div>
 
@@ -190,6 +194,8 @@ const ConsultForm = () => {
                 required 
                 value={email}
                 onChange={(event) => {setEmail(event.target.value)}}
+                title='El correo electrónico debe tener la extensión válida'
+                pattern='^[^\s@]+@[^\s@]+\.(com|net|edu|org|gov|info|biz)$'
               />
             </div>
 
