@@ -138,7 +138,7 @@ const ConsultForm = () => {
 
           <h3 className='text-black font-semibold text-left mb-6'>Coordina una entrevista de admisión</h3>    
 
-          <div className='grid grid-cols-2'>
+          <div className='grid grid-cols-1 md:grid-cols-2'>
             <div className='mb-6'>
               <label
                 htmlFor="name"
@@ -179,7 +179,7 @@ const ConsultForm = () => {
 
           </div> 
 
-          <div className='grid grid-cols-2'>
+          <div className='grid grid-cols-1 md:grid-cols-2'>
           <div className='mb-6'>
               <label 
                 htmlFor="email" 
@@ -251,10 +251,10 @@ const ConsultForm = () => {
                 onChange={(event) => {setMessage(event.target.value)}}
                 maxLength={maxCharacters}>
               </textarea>
-              <p className=' text-gray-600 text-xs relative left-[455px] py-1'>{maxCharacters - message.length} caracteres restantes</p>
+              <p className=' text-gray-600 text-xs relative md:left-[455px] left-[10px] py-1'>{maxCharacters - message.length} caracteres restantes</p>
             </div>
 
-            <div className='mb-6 flex justify-end'>
+            <div className='md:mb-6 flex md:justify-end justify-center'>
               <button 
                 type='submit' 
                 className={disabledBtn() ? styles["form-btn-disabled"] : styles["form-btn-enabled"]}
