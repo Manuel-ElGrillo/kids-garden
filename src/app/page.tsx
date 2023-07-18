@@ -21,7 +21,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section className='flex'>
+        <section className='flex flex-wrap'>
           <CardComponent
             title='Estrellitas'
             text={<>Desarrollo temprano de los niños de 45 días a 2 años</>}
