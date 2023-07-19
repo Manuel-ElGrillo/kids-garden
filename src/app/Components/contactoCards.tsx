@@ -33,7 +33,7 @@ const ContactoCards: React.FC<Contacto> = ({
               <p className="#84cc16">{nombre}</p>
             </h5>
             <p className="font-normal ">{cargo}</p>
-          </section>
+          </section>  
           <section className="flex w-4/12 justify-center">
             <Image src={imgSrc} alt={alt} className="w-20" />
           </section>
