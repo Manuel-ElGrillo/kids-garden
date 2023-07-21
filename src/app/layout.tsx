@@ -29,7 +29,7 @@ export default function RootLayout({
         <head>
           <title>CreSiendo - Kinder Garden</title>
         </head>
-        <body className="{inter.className} dark:bg-[#042f2e] dark:text-gray-100 duration-100" style={{ backgroundColor: "#fff" }}>
+        <body className="{inter.className} dark:bg-gray-800 dark:text-gray-100 duration-100" style={{ backgroundColor: "#fff" }}>
           <Header />
 
           {children}
