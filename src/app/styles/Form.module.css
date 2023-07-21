@@ -26,6 +26,7 @@
 .form-bg {
     background:url('/img/Formulario-admision.jpg');
     background-repeat: no-repeat;
+    background-size: 100% 100%;
     width: 700px;
     border-radius: 0.25rem;
     padding: 1rem;
@@ -62,4 +63,19 @@
     line-height: 1.25rem;
     padding: 0.625rem 5rem 0.625rem 5rem;
     text-align: center;
+}
+
+@media ( max-width: 540px ) {
+    .form-bg {
+        width: 500px;
+    }
+    .form {
+    max-width: 90%;
+   }
+}
+
+@media ( max-width: 375px ) {
+   .form-bg {
+    width: 350px;
+   }
 }
