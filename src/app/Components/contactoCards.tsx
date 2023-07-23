@@ -9,7 +9,6 @@ const ContactoCards: React.FC<Contacto> = ({
   cargo,
   imgSrc,
   alt,
-  cardBackground,
   titleBackground,
   modalnombre,
   modalcargo,
@@ -25,14 +24,14 @@ const ContactoCards: React.FC<Contacto> = ({
     <div className="py-5">
       <Card
         onClick={() => props.setOpenModal("dismissible")}
-        className={`max-w-lg text-center transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-point ${cardBackground}`}
+        className="max-w-lg text-center transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-point bg-purple-400 dark:bg-purple-600"
       >
         <section className="flex">
           <section className="w-8/12 indent-4 space-y-8 align-middle">
             <h5 className="text-xl font-bol-tight text-gray-900 dark:text-white">
-              <p className="#84cc16">{nombre}</p>
+              <p>{nombre}</p>
             </h5>
-            <p className="font-normal ">{cargo}</p>
+            <p>{cargo}</p>
           </section>
           <section className="flex w-4/12 justify-center">
             <Image src={imgSrc} alt={alt} className="w-20" />

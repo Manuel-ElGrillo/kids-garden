@@ -11,7 +11,7 @@ import imgDocente04 from "../imagenes/Artes.png";
 
 export default function Contacto() {
   return (
-    <main className="bg-gray-100 text-black flex min-h-screen flex-col  justify-between p-6">
+    <main className="bg-gray-100 dark:bg-[#401A70] flex min-h-screen flex-col  justify-between p-6">
       <div className="flex">
         {/* seccion directivos */}
 
@@ -22,7 +22,6 @@ export default function Contacto() {
             cargo="Directora General"
             imgSrc={imgDirectora}
             alt="foto de la directora"
-            cardBackground="bg-[#0891b2]"
             titleBackground="bg-ccolor01"
             modalnombre="Adriana Jimena Sánchez"
             modalcargo="Directora General y representante legal de la institucion."
@@ -36,7 +35,6 @@ export default function Contacto() {
             cargo="Vicedirector"
             imgSrc={imgVice}
             alt="foto del vicedirector"
-            cardBackground="bg-[#a3e635]"
             titleBackground="bg-ccolor02"
             modalnombre="Norberto Ceballos"
             modalcargo="Vicedirector de la institucion."
@@ -50,7 +48,6 @@ export default function Contacto() {
             cargo="Coordinadora General"
             imgSrc={imgCoordinadora}
             alt="foto de la coordinadora"
-            cardBackground="bg-[#f97316]"
             titleBackground="bg-ccolor03"
             modalnombre="Romina Casani"
             modalcargo="Coordinadora General y consultora pedagogica"
@@ -70,7 +67,6 @@ export default function Contacto() {
             cargo="Docente"
             imgSrc={imgDocente01}
             alt="foto de la docente"
-            cardBackground="bg-[#0891b2]"
             titleBackground="bg-ccolor01"
             modalnombre="Claudia Maldonado"
             modalcargo="Docente nivel inicial"
@@ -84,7 +80,6 @@ export default function Contacto() {
             cargo="Docente Adjunta"
             imgSrc={imgDocente02}
             alt="foto de la docente02"
-            cardBackground="bg-[#a3e635]"
             titleBackground="bg-ccolor02"
             modalnombre="Maria Laura Peralta"
             modalcargo="Docente adjunta de nivel inicial"
@@ -98,7 +93,6 @@ export default function Contacto() {
             cargo="Docente de artes plsticas"
             imgSrc={imgDocente04}
             alt="foto de la docente03"
-            cardBackground="bg-[#f97316]"
             titleBackground="bg-ccolor03"
             modalnombre="Diego Armando Maradona"
             modalcargo="Docente de artes plasticas"
@@ -112,7 +106,6 @@ export default function Contacto() {
             cargo="Profesora de ingles"
             imgSrc={imgDocente03}
             alt="foto de la docente04"
-            cardBackground="bg-[#d946ef]"
             titleBackground="bg-ccolor04"
             modalnombre="Jimena Montes de Oca"
             modalcargo="Docente de ingles"

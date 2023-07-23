@@ -8,7 +8,7 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: white) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -35,8 +35,8 @@ body {
   
 }
 
-/* @layer components {
+@layer components {
   .button-carousel {
     @apply font-['Tahoma'] text-[20px] text-[#F9FAFB] relative right-[1050px] top-[90px] bg-[#EEBF17] w-[200px] h-[35px]  rounded-[5px];
   }
-} */
+}

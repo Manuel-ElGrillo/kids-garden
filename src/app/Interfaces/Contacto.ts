@@ -5,7 +5,6 @@ export interface Contacto {
     cargo: string,
     imgSrc: StaticImageData,
     alt: string,
-    cardBackground: string,
     titleBackground: string,
     modalnombre: string,
     modalcargo: string,
